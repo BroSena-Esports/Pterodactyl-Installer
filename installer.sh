@@ -288,7 +288,7 @@ panel_install(){
 
     case "$dist" in
         "ubuntu")
-            if [[ "$version" =~ ^20\.04|22\.04|24\.04$ ]]; then
+            if [[ "$version" =~ ^20\.04|22\.04|24\.10|24\.04$ ]]; then
                 echo "🛠 Setting up for Ubuntu $version..."
                 apt -y install gnupg || { echo "❌ Failed to install gnupg!"; exit 1; }
                 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php || { echo "❌ Failed to add PHP repository!"; exit 1; }
